@@ -15,10 +15,10 @@ function media_preview_slider_image_styles_alter(&$styles) {
     foreach ($styles['media_thumbnail']['effects'] as &$effect) {
       if ($effect['name'] == 'image_scale_and_crop') {
         $effect['data'] = array(
-          'width' => '290',
-          'height' => '290',
+          'width' => '300',
+          'height' => '300',
         );
-        $styles['media_thumbnail']['label'] = 'Media thumbnail (290x290)';
+        $styles['media_thumbnail']['label'] = 'Media thumbnail (300x300)';
       }
     }
   }
