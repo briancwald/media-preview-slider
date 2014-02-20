@@ -1,0 +1,5 @@
+<?php 
+
+function media_preview_slider_init() {
+        drupal_add_library('system', 'ui.slider');
+}

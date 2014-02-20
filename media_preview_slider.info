@@ -1,0 +1,9 @@
+name = Media Preview Slider
+description = "Provides UX imporvement by adding a jqueryUI slider for preview media library for easier image selection.</em>"
+package = Media
+core = 7.x
+dependencies[] = media
+
+
+stylesheets[all][] = css/slider-styles.css
+scripts[]      = js/slider.js

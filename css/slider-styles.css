@@ -1,0 +1,19 @@
+
+/*generic styles to ensure basic slider will display*/
+.views-exposed-form .slide-widget {
+}
+#slide-image {
+background: #ccc;
+min-width: 20em;
+margin-top:10px;
+}
+
+#slide-image a {
+background-color: #303;
+}
+
+
+/*set a default generic width of 200 (center of slider min and max)*/
+#media-browser-library-list li {
+	width:200px;
+}
