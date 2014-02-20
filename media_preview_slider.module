@@ -1,5 +1,26 @@
 <?php 
 
+/**
+ * Implements hook_init().
+ */
 function media_preview_slider_init() {
-        drupal_add_library('system', 'ui.slider');
+  drupal_add_library('system', 'ui.slider');
 }
+
+/**
+ * Implements hook_image_styles_alter().
+ */
+function media_preview_slider_image_styles_alter(&$styles) {
+  if (isset($styles['media_thumbnail'])) {
+    foreach ($styles['media_thumbnail']['effects'] as &$effect) {
+      if ($effect['name'] == 'image_scale_and_crop') {
+        $effect['data'] = array(
+          'width' => '290',
+          'height' => '290',
+        );
+        $styles['media_thumbnail']['label'] = 'Media thumbnail (290x290)';
+      }
+    }
+  }
+}
+
