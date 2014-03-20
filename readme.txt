@@ -1,5 +1,7 @@
-For this to work, you will need add a wrapper class around the view:  Media Browser. 
+This module programs a default class for the view:  Media Browser. 
 
-to add the class, edit the view and go to "other" section. click "CSS class" and change it to media-browser-wrapper
+If you the view and go to "other" section. click "CSS class" and change it, this will be overridden.
 
-That should be all.
+This module also changes the default Media Preview imagecache preset to 400x400px
+
+That is all.
