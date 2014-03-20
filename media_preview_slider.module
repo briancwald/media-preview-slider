@@ -15,12 +15,20 @@ function media_preview_slider_image_styles_alter(&$styles) {
     foreach ($styles['media_thumbnail']['effects'] as &$effect) {
       if ($effect['name'] == 'image_scale_and_crop') {
         $effect['data'] = array(
-          'width' => '300',
-          'height' => '300',
+          'width' => '400',
+          'height' => '400',
         );
-        $styles['media_thumbnail']['label'] = 'Media thumbnail (300x300)';
+        $styles['media_thumbnail']['label'] = 'Media thumbnail (400x400)';
       }
     }
   }
 }
 
+/**
+ * Implements hook_views_pre_view().
+ */
+function media_preview_slider_views_pre_view(&$view) {
+  if ($view->name == 'media_default') { 
+    $view->display_handler->default_display->options['css_class'] = 'media-browser-wrapper';
+  }
+}
